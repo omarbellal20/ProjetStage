@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show materiel{% endblock %}
+
+{% block body %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Show materiel</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="{{ path('home')}}">Home</a></li>
+              <li class="breadcrumb-item active">Materiel : {{monmateriel.libele}}</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3  class="card-title">Page materiel {{monmateriel.libele}}</h3>
+            </div>
+            <div class="card-body">
+            <table>
+                <tr><td class="col-mod-4" style="padding-right: 35px">Identifiant  : </td>
+                <td class="col-mod-8">{{monmateriel.id}}</td></tr>
+                <tr><td class="col-mod-4">Nom : </td>
+                <td class="col-mod-8">{{monmateriel.libele}}</td></tr>
+                <tr><td class="col-mod-4">Type : </td>
+                <td class="col-mod-8">{{monmateriel.type}}</td></tr>
+                <tr><td class="col-mod-4">Marque : </td>
+                <td class="col-mod-8">{{monmateriel.marque}}</td></tr>
+                <tr><td class="col-mod-4">Date : </td>
+                <td class="col-mod-8">{{monmateriel.dateacquisation|date('d-m-Y')}}</td></tr>
+                <tr><td class="col-mod-4">Prix : </td>
+                <td class="col-mod-8">{{monmateriel.prix}}</td></tr>
+                <tr><td class="col-mod-4">Quantité : </td>
+                <td class="col-mod-8">{{monmateriel.quantite}}</td></tr>
+            </table>
+                <br>
+                <a href="{{ path('materiel') }}"><button class="btn btn-secondary btn-block">Retourner</button></a>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+     
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>
+        Copyright &copy; 
+        <script>var CurrentYear = new Date().getFullYear() 
+        document.write(CurrentYear)</script> 
+        <a href="https://www.facebook.com/bellalomarB/">OmarBellal</a>.
+    </strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+
+
+
+{% endblock %}

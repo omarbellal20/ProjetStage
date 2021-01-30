@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block body %}
+<div class="hold-transition register-page">
+<div class="register-box">
+  <div class="card card-outline card-primary">
+    <div class="card-header text-center">
+      <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
+    </div>
+    <div class="card-body">
+      <p class="login-box-msg">Register a new membership</p>
+
+        {{form_start(form)}}
+        {#{form_widget(form)}#}
+        {{form_row(form.username , {'label':'Username : ','attr':{'placeholder':'Username...'}}) }}
+        {{form_row(form.email , {'label':'Email : ','attr':{'placeholder':'Adress email...'}}) }}
+        {{form_row(form.password , {'label':'Password : ','attr':{'placeholder':'Password...'}}) }}
+        {{form_row(form.confirm_password , {'label':'Confirm Password : ','attr':{'placeholder':'Password...'}}) }}
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        {{form_end(form)}}
+
+        </div>
+  </div>
+</div>
+
+
+</div>
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>
+        Copyright &copy; 
+        <script>var CurrentYear = new Date().getFullYear() 
+        document.write(CurrentYear)</script> 
+        <a href="https://www.facebook.com/bellalomarB/">OmarBellal</a>.
+    </strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+
+
+
+{% endblock %}
+
+
+

@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Site{% endblock %}
+
+{% block body %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Add Site</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="{{ path('home')}}">Home</a></li>
+              <li class="breadcrumb-item active">Ajouter Site</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3  class="card-title">Ajouter Site</h3>
+            </div>
+            <div class="card-body">
+                {{form_start(form)}}
+                {{form_widget(form)}}
+                <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
+                {{form_end(form)}}
+                <br>
+                <a href="{{ path('site') }}"><button class="btn btn-secondary btn-block">Afficher</button></a>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+     
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>
+        Copyright &copy; 
+        <script>var CurrentYear = new Date().getFullYear() 
+        document.write(CurrentYear)</script> 
+        <a href="https://www.facebook.com/bellalomarB/">OmarBellal</a>.
+    </strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+
+
+
+{% endblock %}

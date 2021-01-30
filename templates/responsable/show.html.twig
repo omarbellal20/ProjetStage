@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New responsable{% endblock %}
+
+{% block body %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Show responsable</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="{{ path('home')}}">Home</a></li>
+              <li class="breadcrumb-item active">responsable : {{monresponsable.username}}</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3  class="card-title">Page responsable {{monresponsable.username}}</h3>
+            </div>
+            <div class="card-body">
+            <table>
+                <tr><td class="col-mod-4" style="padding-right: 35px">Identifiant  : </td>
+                <td class="col-mod-8">{{monresponsable.id}}</td></tr>
+                <tr><td class="col-mod-4">UserName : </td>
+                <td class="col-mod-8">{{monresponsable.username}}</td></tr>
+                <tr><td class="col-mod-4">Email : </td>
+                <td class="col-mod-8">{{monresponsable.email}}</td></tr>
+                <tr><td class="col-mod-4">Role : </td>
+                {% for role in monresponsable.roles %}
+                  <td class="col-mod-8">{{role}}</td>
+                {% endfor %}
+                </tr>
+            </table>
+                <br>
+                <a href="{{ path('responsable') }}"><button class="btn btn-secondary btn-block">Retourner</button></a>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+     
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 1.0.0
+    </div>
+    <strong>
+        Copyright &copy; 
+        <script>var CurrentYear = new Date().getFullYear() 
+        document.write(CurrentYear)</script> 
+        <a href="https://www.facebook.com/bellalomarB/">OmarBellal</a>.
+    </strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+
+
+
+{% endblock %}
